@@ -6,7 +6,23 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_decimals",
+						"type": "uint8"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -64,12 +80,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "delegate",
+						"name": "",
 						"type": "address"
 					}
 				],
@@ -88,12 +104,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "delegate",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "numTokens",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -112,7 +128,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "tokenOwner",
+						"name": "",
 						"type": "address"
 					}
 				],
@@ -128,6 +144,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -138,6 +172,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -183,12 +235,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "receiver",
+						"name": "recipient",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "numTokens",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -207,17 +259,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "sender",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "buyer",
+						"name": "recipient",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "numTokens",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -246,7 +298,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/DIOcoin.sol": "DIOcoin"
+			"tokenDio.sol": "To"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -260,12 +312,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/DIOcoin.sol": {
-			"keccak256": "0x197606ee4dc92fd128a4dca40229830ffb28ff00cef9fa430af3186f79ef94f7",
-			"license": "GPL-3.0",
+		"IERC20.sol": {
+			"keccak256": "0x0ebced88b607735dc9a6b2c1404cf9d3973f22f018c2d1b13ba0bcbff2aeea87",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://5181ffe74311233cd0e5422334446fe458b1b28e8556206176e35e19cf286948",
-				"dweb:/ipfs/QmTEBdjhe9G2dBDaTB9oFmWh5yg7KaRz9L8KP2P2wuiVTU"
+				"bzz-raw://aa8e6906636424daa5fe6bf5dbf57c9728f9c1a87198d82ca53d4568dbe7ae0c",
+				"dweb:/ipfs/QmTuavq8CV441LysAUuipAYcsdkWYZgKHgKN5TjLy5927F"
+			]
+		},
+		"tokenDio.sol": {
+			"keccak256": "0x52779e49e31d650c3fea5e7a6a3c4e3896ebb2983fb39c5b0184f1eddb055e74",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ca32447661e912f339b2718cf3d908dc25ba333290074eddc612754b46fb8836",
+				"dweb:/ipfs/QmRkNtUoSN9KmtidNCfN9kBsSbCmsgUEAz6i9udr9tp2Fo"
 			]
 		}
 	},

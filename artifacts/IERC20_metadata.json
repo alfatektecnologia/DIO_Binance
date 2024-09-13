@@ -6,70 +6,15 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
 						"internalType": "address",
 						"name": "owner",
 						"type": "address"
 					},
 					{
-						"indexed": true,
 						"internalType": "address",
 						"name": "spender",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "Transfer",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "delegate",
 						"type": "address"
 					}
 				],
@@ -88,12 +33,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "delegate",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "numTokens",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -112,7 +57,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "tokenOwner",
+						"name": "account",
 						"type": "address"
 					}
 				],
@@ -122,45 +67,6 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "decimals",
-				"outputs": [
-					{
-						"internalType": "uint8",
-						"name": "",
-						"type": "uint8"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "name",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "symbol",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -183,12 +89,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "receiver",
+						"name": "recipient",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "numTokens",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -207,17 +113,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "sender",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "buyer",
+						"name": "recipient",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "numTokens",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -246,7 +152,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/DIOcoin.sol": "DIOcoin"
+			"IERC20.sol": "IERC20"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -260,12 +166,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/DIOcoin.sol": {
-			"keccak256": "0x197606ee4dc92fd128a4dca40229830ffb28ff00cef9fa430af3186f79ef94f7",
-			"license": "GPL-3.0",
+		"IERC20.sol": {
+			"keccak256": "0x0ebced88b607735dc9a6b2c1404cf9d3973f22f018c2d1b13ba0bcbff2aeea87",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://5181ffe74311233cd0e5422334446fe458b1b28e8556206176e35e19cf286948",
-				"dweb:/ipfs/QmTEBdjhe9G2dBDaTB9oFmWh5yg7KaRz9L8KP2P2wuiVTU"
+				"bzz-raw://aa8e6906636424daa5fe6bf5dbf57c9728f9c1a87198d82ca53d4568dbe7ae0c",
+				"dweb:/ipfs/QmTuavq8CV441LysAUuipAYcsdkWYZgKHgKN5TjLy5927F"
 			]
 		}
 	},
